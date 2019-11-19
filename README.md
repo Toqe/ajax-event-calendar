@@ -1,8 +1,18 @@
+# Ajax Event Calendar 2019 #
+
 This is a fork of the Ajax Event Calendar, a Wordpress plugin by Eran Miller. It fixes some minor issues to allow me running this plugin in an up-to-date Wordpress installation (sorry, no time for looking for an alternative). At the moment of writing I'm running Wordpress 5.3 on PHP 7.3.
+
+What's fixes?
+
+* Fix Warning: Declaration of aec_contributor_list::form() should be compatible with WP_Widget::form($instance)
+* Fix problems regarding times / timezones: Just use UTC for everything
 
 Below you can find the original README.
 
+___
+
 # Ajax Event Calendar #
+
 Contributors: eranmiller  
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCDKRE46K2NBA  
 Tags: calendar, event calendar, event list, move events, resize events, copy events, recurring events, repeating events  
