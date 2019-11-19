@@ -1,3 +1,7 @@
+This is a fork of the Ajax Event Calendar, a Wordpress plugin by Eran Miller. It fixes some minor issues to allow me running this plugin in an up-to-date Wordpress installation (sorry, no time for looking for an alternative). At the moment of writing I'm running Wordpress 5.3 on PHP 7.3.
+
+Below you can find the original README.
+
 # Ajax Event Calendar #
 Contributors: eranmiller  
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCDKRE46K2NBA  
