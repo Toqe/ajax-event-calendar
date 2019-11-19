@@ -369,12 +369,13 @@ if (!class_exists('ajax_event_calendar')) {
 	    function localize_plugin($page) {
 			load_plugin_textdomain(AEC_NAME, false, AEC_NAME . '/locale/');
 			$timezone = get_option('timezone_string');
-			if ($timezone) {
-				date_default_timezone_set($timezone);
-			} else {
+					
+			//if ($timezone) {
+			//	date_default_timezone_set($timezone);
+			//} else {
 				// TODO: look into converting gmt_offset into timezone_string
 				date_default_timezone_set('UTC');
-			}
+			//}
 			
 			// localization: date/time
 			if (get_option('timezone_string')) {
