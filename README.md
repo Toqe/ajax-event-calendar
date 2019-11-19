@@ -1,30 +1,30 @@
-=== Ajax Event Calendar ===
-Contributors: eranmiller
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCDKRE46K2NBA
-Tags: calendar, event calendar, event list, move events, resize events, copy events, recurring events, repeating events
-Requires at least: 3.1
-Tested up to: 3.5
-Stable tag: 1.0.4
+# Ajax Event Calendar #
+Contributors: eranmiller  
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NCDKRE46K2NBA  
+Tags: calendar, event calendar, event list, move events, resize events, copy events, recurring events, repeating events  
+Requires at least: 3.1  
+Tested up to: 3.5  
+Stable tag: 1.0.4  
 
 An easy-to-use community calendar and event list that allows authorized users to visually manage events into custom categories.
 
-== Description ==
+## Description ##
 
 An easy-to-use visual community calendar that allows authorized users to add, edit, move, copy, resize, delete and filter events into customizable categories - supports daily, weekly, monthly and yearly repeating events.  Calendars can be added to your site by typing "[calendar]" shortcode in the body of a page, a post or a text widget.  Event lists are similarly added via the "[eventlist]" shortcode.  Both shortcodes are highly customizable with numerous [display options](http://code.google.com/p/wp-aec/wiki/ShortcodeOptions).
 
-[youtube http://www.youtube.com/watch?v=bEzomAUe4DE&rel=0]
+[![](http://img.youtube.com/vi/bEzomAUe4DE/0.jpg)](http://www.youtube.com/watch?v=bEzomAUe4DE "")
 
 NOTE: The plugin supports multiple eventlist instances per page, but only one calendar instance.
 <br>This plugin does not support WordPress MU.
 
-= Support =
+### Support ###
 * [Read about installation instructions](http://wordpress.org/extend/plugins/ajax-event-calendar/installation)
 * [Read about shortcode display options](http://code.google.com/p/wp-aec/wiki/ShortcodeOptions)
 * [Find answers to Frequently Asked Questions](http://code.google.com/p/wp-aec/wiki/FrequentlyAskedQuestions)
 * [Ask for help from fellow users on the WordPress forums](http://wordpress.org/tags/ajax-event-calendar?forum_id=10)
 * [Submit issues and feature requests to the Author using the Issue Tracker](http://code.google.com/p/wp-aec/issues/list?can=1)
 
-=  Features =
+###  Features ###
 * Display events in Day, Week, and Month views
 * Copy/Duplicate/Clone events
 * Supports daily, weekly, biweekly, monthly, and yearly repeating events
@@ -54,7 +54,7 @@ NOTE: The plugin supports multiple eventlist instances per page, but only one ca
 Arabic, Catalan, Chinese [China and Taiwan], Czech, Danish, Dutch, French, German, Hungarian, Italian,
 Indonesian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Tamil, Turkish
 
-== Installation ==
+## Installation ##
 
 1. Follow the typical [WordPress plugin installation steps](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 2. If you are unfamiliar with shortcode usage, [learn about shortcodes](http://codex.wordpress.org/Shortcode_API)
@@ -69,12 +69,12 @@ Indonesian, Latvian, Lithuanian, Norwegian, Polish, Portuguese, Romanian, Russia
 * Your blog time zone option MUST BE A CITY VALUE, the plugin may not handle dates correctly when set to a numeric gmt_offset.
 * Prior to plugin updates its always a good idea to backup event data. Select a plugin from the WordPress Plugins Repository that can backup and restore custom (non-WordPress) tables.  Event data is located in aec_event and aec_event_category tables.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 The [answers to frequently asked questions](http://code.google.com/p/wp-aec/wiki/FrequentlyAskedQuestions).
 
 
-== Screenshots ==
+## Screenshots ##
 
 1. Front-end Calendar shortcode setup
 2. Options - event form fields selection and calendar settings
@@ -89,7 +89,7 @@ The [answers to frequently asked questions](http://code.google.com/p/wp-aec/wiki
 11. Front-end Events Detail View
 
 
-== Other Notes ==
+## Other Notes ##
 
 These fine plugins were instrumental in the creation of this plugin:
 
@@ -99,9 +99,9 @@ These fine plugins were instrumental in the creation of this plugin:
 4. Category color selection (miniColors)
 
 
-== Changelog ==
+## Changelog ##
 
-= 1.0.4 =
+### 1.0.4 ###
 * [#427](http://code.google.com/p/wp-aec/issues/detail?id=427): fixed unable to create new events with latest version of wp
 * [#424](http://code.google.com/p/wp-aec/issues/detail?id=424): fixed WP-Aec with Php 5.4, Events Dont Appear
 * [#307](http://code.google.com/p/wp-aec/issues/detail?id=307): fixed events not showing when backend is running SSL
@@ -109,16 +109,16 @@ These fine plugins were instrumental in the creation of this plugin:
 * [#186](http://code.google.com/p/wp-aec/issues/detail?id=186): fixed Event Detail Info Popup Window hides behind WP header image & menu
 * [#280](http://code.google.com/p/wp-aec/issues/detail?id=280): fixed Event Address Display
 
-= 1.0.3 =
+### 1.0.3 ###
 * [#366](http://code.google.com/p/wp-aec/issues/detail?id=366): fixed fullcalendar javascript error
 * [#299](http://code.google.com/p/wp-aec/issues/detail?id=299): fixed Missing May shortcut for translation
 
-= 1.0.2 =
+### 1.0.2 ###
 * [#264](http://code.google.com/p/wp-aec/issues/detail?id=264): fixed critical IE button locking issue
 * added inline widget message to alert users not aware of notifications on plugin homepage
 * added chinese
 
-= 1.0.1 =
+### 1.0.1 ###
 * fixed drag-n-drop functionality (updated fullcalendar.js)
 * [#246](http://code.google.com/p/wp-aec/issues/detail?id=246): fixed mousewheel scrolling (updated mousescroll.js)
 * replaced dynamically generated cat-colors.css file with inline css to eliminate permission failures
@@ -126,7 +126,7 @@ These fine plugins were instrumental in the creation of this plugin:
 * fixed modal overlay caused by theme header images css
 
 
-= 1.0 =
+### 1.0 ###
 * added support repeating events
 * added copy event functionality
 * added option to toggle mousescroll in administrative calendar
@@ -163,7 +163,7 @@ These fine plugins were instrumental in the creation of this plugin:
 * updated italian
 * updated catalan
 
-= 0.9.9.2 =
+### 0.9.9.2 ###
 * added latvian
 * updated arabic
 * updated swedish
@@ -171,14 +171,14 @@ These fine plugins were instrumental in the creation of this plugin:
 * fixed option to toggle link target in new window
 * fixed critical IE bug
 
-= 0.9.9.1 =
+### 0.9.9.1 ###
 * optimized mousewheel scroll
 * optimized loading events notification
 * fixed category reassign/delete process, now completes deletion of emptied category
 * optimized performance
 * added swedish
 
-= 0.9.9 =
+### 0.9.9 ###
 * added options to hide any non-essential input field in the event form
 * added option to allow URLs in the description field to be clickable links
 * added toggle option to open links in either a new or the same browser window
@@ -216,7 +216,7 @@ These fine plugins were instrumental in the creation of this plugin:
 * updated italian
 * updated french
 
-= 0.9.8.6 =
+### 0.9.8.6 ###
 * added line break detection so the description field displays as it is entered
 * limit creation of expired events fix
 * added norwegian
@@ -224,13 +224,13 @@ These fine plugins were instrumental in the creation of this plugin:
 * added italian
 * updated tamil
 
-= 0.9.8.51 beta =
+### 0.9.8.51 beta ###
 * beta release
 * fixed date/time field processing via event add/update form
 * fixed duration style
 * added tamil
 
-= 0.9.8.5 =
+### 0.9.8.5 ###
 * calendar weekday (tue) short name fix
 * plugin options page save settings for manage_calendar capability fix
 * automatically adjusts modal top when WordPress admin bar is visible (contributed by Carl W.)
@@ -249,12 +249,12 @@ These fine plugins were instrumental in the creation of this plugin:
 * added danish
 * added polish
 
-= 0.9.8.1 =
+### 0.9.8.1 ###
 * replaced php 5.3.x dependent DateTime class with a modified strtotime to accommodate d/m/Y format
 * revised admin menu wording
 * added german
 
-= 0.9.8 =
+### 0.9.8 ###
 * comprehensive refactoring of ajax elements
 * localized all javascript
 * fixed google map link generator and added toggle display control
@@ -268,109 +268,109 @@ These fine plugins were instrumental in the creation of this plugin:
 * updated portuguese
 * added dutch
 
-= 0.9.7.1 =
+### 0.9.7.1 ###
 * event display fix
 * updated french
 
-= 0.9.7 =
+### 0.9.7 ###
 * fixed localization bugs
 * revised installation and faq instructions
 
-= 0.9.6 =
+### 0.9.6 ###
 * fixed po files to include plural translation strings
 * fixed date localization bug on calendar
 
-= 0.9.5 =
+### 0.9.5 ###
 * added upcoming events widget
 * added redirect to event administration page from front-end calendar page login link
 * changed front-end calendar implementation from custom template to shortcode, to accommodate wider range of themes
 * auto-generated google maps link, based on event address fields
 * added french
 
-= 0.9.1 =
+### 0.9.1 ###
 * added portuguese
 * added more localization
 * fixed default option initialization
 * further improved event detail page ui
 
-= 0.9 =
+### 0.9 ###
 * improved event detail page ui
 * refactored event detail page (to address instances of event detail not loading)
 * added event detail form field options - plugin options page now located in "settings" menu
 * added multi-language support
 
-= 0.8 =
+### 0.8 ###
 * fixed css conflicts with themes
 * added sidebar toggle option
 * added password protection support
 
-= 0.7.6 =
+### 0.7.6 ###
 * fixed toggle admin menu option
 
-= 0.7.5 =
+### 0.7.5 ###
 * fixed css, filters and modals
 
-= 0.7.4 =
+### 0.7.4 ###
 * fixed activity report missing file
 
-= 0.7.3 =
+### 0.7.3 ###
 * fixed update issues
 
-= 0.7.2 =
+### 0.7.2 ###
 * fixed truncated plugin description
 
-= 0.7.1 =
+### 0.7.1 ###
 * fixed widget file path
 
-= 0.7 =
+### 0.7 ###
 * added options for event limits and admin menu toggle
 * modified css to address reported style collisions
 * added a php5 dependency check to halt installation for users running older versions
 
-= 0.6.1 =
+### 0.6.1 ###
 * updated plugin link
 
-= 0.6 =
+### 0.6 ###
 * refined event input form
 * roles and capabilities are removed on plugin deletion
 * added events column to administrative users table
 * all calendar events associated with a deleted user are removed
 
-= 0.5.1 =
+### 0.5.1 ###
 * admins can edit past events
 * admins can see the user name and organization of event creator in edit mode
 
-= 0.5 =
+### 0.5 ###
 * category management interface
 * refined event editing validation
 * calendar contributor widget
 
-= 0.4 =
+### 0.4 ###
 * current month activity report
 
-= 0.3.1 =
+### 0.3.1 ###
 * fixed time validation
 * fixed jgrowl css hide all notifications
 * minified css
 * fixed query to retrieve events that span longer than a single month
 
-= 0.3 =
+### 0.3 ###
 * streamlined event input form html and css
 * fixed calculation for all day event durations
 * added validation for event duration input
 * added organization name to event viewing modal, from data provided by user's wordpress profile
 * dynamically generated calendar contributor list
 
-= 0.2.1 =
+### 0.2.1 ###
 * added help link
 
-= 0.2 =
+### 0.2 ###
 * event display styling
 * filter appearance
 
-= 0.1 =
+### 0.1 ###
 * getting the wheels to stay on the wagon
 
-== Upgrade Notice ==
-= 1.0.4 =
+## Upgrade Notice ##
+### 1.0.4 ###
 * IE and misc. bug fixes
