@@ -12,9 +12,9 @@
 
 class aec_upcoming_events extends WP_Widget{
 
-	function aec_upcoming_events () {
+	function __construct() {
 		$widget_ops = array('description' => 'This widget has been replaced by the [eventlist] shortcode, read the documentation for details!');
-		parent::WP_Widget(false, __('AEC Upcoming Events', AEC_NAME), $widget_ops);
+		parent::__construct(false, __('AEC Upcoming Events', AEC_NAME), $widget_ops);
 	}
 		
 	function widget($args, $instance) {
@@ -42,5 +42,5 @@ class aec_upcoming_events extends WP_Widget{
 <?php
 	}
 }
-add_action('widgets_init', create_function('', 'return register_widget("aec_upcoming_events");'));
+add_action('widgets_init', function () { register_widget('aec_upcoming_events'); });
 ?>

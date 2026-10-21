@@ -1,11 +1,18 @@
 # Ajax Event Calendar 2019 #
 
-This is a fork of the Ajax Event Calendar, a Wordpress plugin by Eran Miller. It fixes some minor issues to allow me running this plugin in an up-to-date Wordpress installation (sorry, no time for looking for an alternative). At the moment of writing I'm running Wordpress 5.3 on PHP 7.3.
+This is a fork of the Ajax Event Calendar, a Wordpress plugin by Eran Miller. It fixes some minor issues to allow me running this plugin in an up-to-date Wordpress installation (sorry, no time for looking for an alternative). It was originally patched for Wordpress 5.3 on PHP 7.3; as of 2026 it runs on Wordpress 7.1, tested with PHP 7.4 and PHP 8.5.
 
-What's fixes?
+What has been fixed?
 
 * Fix Warning: Declaration of aec_contributor_list::form() should be compatible with WP_Widget::form($instance)
 * Fix problems regarding times / timezones: Just use UTC for everything
+* PHP 8 compatibility (still works on PHP 7.4):
+  * Replace `create_function()` (removed in PHP 8.0) with closures
+  * Only call `get_magic_quotes_gpc()` if it still exists (removed in PHP 8.0)
+  * Widgets: use `__construct()` and `parent::__construct()` instead of PHP 4 style constructors and `WP_Widget::WP_Widget()`
+  * Declare the `$timezone` property (dynamic properties are deprecated since PHP 8.2)
+  * Remove the default value of an optional parameter before required ones (deprecated since PHP 8.0)
+  * Add parentheses to `"+" . $n+1` in the repeat calculation (operator precedence changed in PHP 8.0)
 
 Below you can find the original README.
 

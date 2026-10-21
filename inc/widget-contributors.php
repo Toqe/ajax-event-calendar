@@ -5,9 +5,9 @@
 
 class aec_contributor_list extends WP_Widget {
 
-	function aec_contributor_list () {
+	function __construct() {
 		$widget_ops = array('description' => __('A list of calendar contributors linked to their organization websites', AEC_NAME));
-		parent::WP_Widget(false, __('AEC Contributors', AEC_NAME), $widget_ops);
+		parent::__construct(false, __('AEC Contributors', AEC_NAME), $widget_ops);
 	}
 	
 	function widget ($args, $instance) {
@@ -63,5 +63,5 @@ class aec_contributor_list extends WP_Widget {
 	}
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("aec_contributor_list");'));
+add_action('widgets_init', function () { register_widget('aec_contributor_list'); });
 ?>

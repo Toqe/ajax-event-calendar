@@ -60,6 +60,7 @@ if (!class_exists('ajax_event_calendar')) {
 		private $required_fields  = array();
 		private $shortcode_params = array();
 		private $admin_messages	  = array();
+		private $timezone;
 		private $plugin_defaults  = array(
 									'filter_label'		=> 'Show Type',
 									'limit' 			=> '0',
@@ -390,7 +391,7 @@ if (!class_exists('ajax_event_calendar')) {
 			}
 			
 			// get_magic_quotes_gpc issue
-			if (get_magic_quotes_gpc()) {
+			if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
 				$this->set_admin_alert(sprintf('<p>%s %s <br>%s <a href="http://wordpress.org/support/topic/plugin-ajax-event-calendar-ajax-event-calendar-dont-like-the-apostrophes?replies=11#post-2259386" target="_blank"> <strong>%s</strong></a>. %s</p>'
 				, __('Your server has PHP magic_quotes_gpc set to active.', AEC_NAME)
 				, __('This produces formatting errors in the Ajax Event Calendar plugin.', AEC_NAME)
@@ -1025,7 +1026,7 @@ if (!class_exists('ajax_event_calendar')) {
 			$newDate = strtotime("+{$n} months", $date);
 			// adjustment for events that repeat on the 29th, 30th and 31st of a month
 			if (date('j', $date) !== (date('j', $newDate))) {
-				$newDate = strtotime("+" . $n+1 . " months", $date);
+				$newDate = strtotime("+" . ($n + 1) . " months", $date);
 			}
 			return $newDate;
 		}
@@ -1034,7 +1035,7 @@ if (!class_exists('ajax_event_calendar')) {
 			$newDate = strtotime("+{$n} years", $date);
 			// adjustment for events that repeat on february 29th
 			if (date('j', $date) !== (date('j', $newDate))) {
-				$newDate = strtotime("+" . $n+3 . " years", $date);
+				$newDate = strtotime("+" . ($n + 3) . " years", $date);
 			}
 			return $newDate;
 		}
@@ -1534,14 +1535,14 @@ if (!class_exists('ajax_event_calendar')) {
 				parse_str($input, $array);	// convert serialized form into array
 				$input = $array;
 			}
-			array_walk($input, create_function('&$val', '$val = trim($val);'));	// trim whitespace from input
+			array_walk($input, function (&$val) { $val = trim((string) $val); });	// trim whitespace from input
 			return $input;
 		}
 
 		// removes slashes from strings and arrays
 		function cleanse_output($output) {
 			if (is_array($output)) {
-				array_walk_recursive($output, create_function('&$val', '$val = trim(stripslashes($val));'));
+				array_walk_recursive($output, function (&$val) { $val = trim(stripslashes((string) $val)); });
 			} else {
 				$output = stripslashes($output);
 			}
@@ -1574,7 +1575,7 @@ if (!class_exists('ajax_event_calendar')) {
 		// convert category string input into array, force integer values, return serialized
 		function cleanse_shortcode_input($input) {
 			$input = explode(',', $input);
-			array_walk($input, create_function('&$val', '$val = intval($val);'));
+			array_walk($input, function (&$val) { $val = intval($val); });
 			return join(',', $input);
 		}
 
@@ -1761,7 +1762,7 @@ if (!class_exists('ajax_event_calendar')) {
 		}
 
 		// adds column field value to WordPress users page
-		function add_events_column_data($empty='', $column_name, $user_id) {
+		function add_events_column_data($empty, $column_name, $user_id) {
 			if ($column_name == 'calendar_events') {
 				return $this->db_query_events_by_user($user_id);
 			}
